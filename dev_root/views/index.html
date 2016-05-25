@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="PrepaidSEO">
+<head lang="eng">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+    <title>Prepaid.Web.SEO</title>
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../css/common.min.css">
+    <!-- endinject -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body ng-controller="MainCtrl">
+
+    <!-- Header -->
+    <header ui-view="header" id="header"></header>
+    <!-- /Header -->
+    <!-- Data Content -->
+    <section ui-view="data-content"
+             class="container"></section>
+    <!-- /Data Content -->
+    <section ui-view="error"
+             class="container"></section>
+    <!-- Footer -->
+    <footer ui-view="footer"
+            class="navbar-fixed-bottom bg-default p-tb-xs"
+            id="footer"></footer>
+    <!-- /Footer -->
+    <!-- Project Scripts -->
+    <!-- File With Constant API Url -->
+    <!--<script src="../js/api-url-config.js"></script>-->
+    <!-- vendor:js -->
+    <script src="../js/libs/jquery.min.js"></script>
+    <script src="../js/libs/bootstrap.min.js"></script>
+    <script src="../js/libs/angular.min.js"></script>
+    <script src="../js/libs/angular-animate.min.js"></script>
+    <script src="../js/libs/angular-touch.min.js"></script>
+    <script src="../js/libs/loading-bar.min.js"></script>
+    <script src="../js/libs/angular-ui-router.min.js"></script>
+    <script src="../js/libs/ui-bootstrap.min.js"></script>
+    <script src="../js/libs/ui-bootstrap-tpls.min.js"></script>
+    <!-- endinject -->
+    <!-- dev:js -->
+    <script src="../js/api-url-config.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/constant.js"></script>
+    <script src="../js/controllers/main.controller.js"></script>
+    <script src="../js/directives/api.error.directive.js"></script>
+    <script src="../js/filters/some.filter.js"></script>
+    <script src="../js/services/customer.data.service.js"></script>
+    <!-- endinject -->
+</body>
+</html>
