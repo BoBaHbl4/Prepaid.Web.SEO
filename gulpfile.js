@@ -23,7 +23,7 @@ gulp.task('browser-sync', function() {
         server: {
             baseDir: "./dev_root/"
         },
-        startPath: "/views"
+        startPath: "/views/index.html"
     });
 });
 

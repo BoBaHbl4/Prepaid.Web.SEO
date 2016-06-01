@@ -12,11 +12,11 @@
         cfpLoadingBarProvider.spinnerTemplate = '' +
             '<div class="page-spinner"><i class="fa fa-spinner fa-pulse page-spinner-icon text-primary"></i></div>';
 
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/home/');
 
         $stateProvider
             .state('root',{
-                url: '/',
+                url: '',
                 abstract: true,
                 views: {
                     'header': {
