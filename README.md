@@ -5,7 +5,7 @@ Starting pack for angularjs project with default nodejs/bower packages and gulp 
 1.0.0
 
 ### Installation notes
-'Preapaid.Web.SEO' requires [node, npm](https://nodejs.org/) and [bower](http://bower.io/) (follow links to read installation guides).
+'Prepaid.Web.SEO' requires [node, npm](https://nodejs.org/) and [bower](http://bower.io/) (follow links to read installation guides).
 
 To start project install all npm and bower dependencies run in command line:
 
