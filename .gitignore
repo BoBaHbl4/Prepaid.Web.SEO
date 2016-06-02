@@ -4,6 +4,3 @@ bower_components/
 .idea/
 bin/
 obj/
-Web.config
-Web.Debug.config
-Web.Release.config

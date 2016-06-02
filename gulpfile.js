@@ -23,11 +23,11 @@ gulp.task('browser-sync', function() {
     browserSync({
         server: {
             baseDir: "./dev_root/",
-            index: "/index.html",
-            routes: {
-                "/home": "index.html"
-            },
-            middleware: [ historyApiFallback() ]
+            index: "/index.html"
+            //routes: {
+            //    "/home": "index.html"
+            //},
+            //middleware: [ historyApiFallback() ]
         },
         startPath: "/"
     });
