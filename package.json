@@ -1,5 +1,5 @@
 {
-  "name": "Frontender",
+  "name": "Prepaid.Web.SEO",
   "version": "0.0.1",
   "devDependencies": {
     "browser-sync": "^2.11.1",
@@ -22,6 +22,7 @@
     "gulp-util": "^3.0.7",
     "imagemin-pngquant": "^4.2.0",
     "merge-stream": "^1.0.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "connect-history-api-fallback": "^1.2.0"
   }
 }

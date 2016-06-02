@@ -71,6 +71,7 @@
     <Content Include="dev_root\css\less\loading-bar.css" />
     <Content Include="dev_root\css\lib-styles.min.css" />
     <Content Include="dev_root\css\main.min.css" />
+    <Content Include="dev_root\index.html" />
     <Content Include="dev_root\js\api-url-config.js" />
     <Content Include="dev_root\js\app.js" />
     <Content Include="dev_root\js\config.js" />
@@ -195,6 +196,7 @@
     <Content Include="bower.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="dev_root\web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -224,7 +226,16 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52264</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Prepaid.Web.SEO</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>

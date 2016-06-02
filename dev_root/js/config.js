@@ -12,7 +12,7 @@
         cfpLoadingBarProvider.spinnerTemplate = '' +
             '<div class="page-spinner"><i class="fa fa-spinner fa-pulse page-spinner-icon text-primary"></i></div>';
 
-        $urlRouterProvider.otherwise('/home/');
+        $urlRouterProvider.otherwise('/app-home/');
 
         $stateProvider
             .state('root',{
@@ -20,49 +20,49 @@
                 abstract: true,
                 views: {
                     'header': {
-                        templateUrl: '../views/header.html'
+                        templateUrl: '/views/header.html'
                     },
                     'data-content':{
-                        templateUrl: '../views/data-content.html'
+                        templateUrl: '/views/data-content.html'
                     },
                     'footer':{
-                        templateUrl: '../views/footer.html'
+                        templateUrl: '/views/footer.html'
                     }
                 }
             })
             .state('root.home', {
-                url: '/home/',
+                url: '/app-home/',
                 controller: 'MainCtrl',
                 views: {
                     'container@': {
-                        templateUrl: '../views/index.html'
+                        templateUrl: '/index.html'
                     },
                     'state-content':{
-                        templateUrl: '../views/index.state.html'
+                        templateUrl: '/views/index.state.html'
                     }
                 }
             })
             .state('root.about', {
-                url: '/about/',
+                url: '/app-about/',
                 controller: 'MainCtrl',
                 views: {
                     'container@': {
-                        templateUrl: '../views/index.html'
+                        templateUrl: '/index.html'
                     },
                     'state-content':{
-                        templateUrl: '../views/about.state.html'
+                        templateUrl: '/views/about.state.html'
                     }
                 }
             })
             .state('root.contacts', {
-                url: '/contacts/',
+                url: '/app-contacts/',
                 controller: 'MainCtrl',
                 views: {
                     'container@': {
-                        templateUrl: '../views/index.html'
+                        templateUrl: '/index.html'
                     },
                     'state-content':{
-                        templateUrl: '../views/contacts.state.html'
+                        templateUrl: '/views/contacts.state.html'
                     }
                 }
             });

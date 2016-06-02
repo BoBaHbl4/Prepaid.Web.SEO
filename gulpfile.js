@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var browserSync = require("browser-sync");
-var reload      = browserSync.reload;
+var historyApiFallback = require('connect-history-api-fallback')
+var reload = browserSync.reload;
 var less = require("gulp-less");
 var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
@@ -21,9 +22,14 @@ var del = require('del');
 gulp.task('browser-sync', function() {
     browserSync({
         server: {
-            baseDir: "./dev_root/"
+            baseDir: "./dev_root/",
+            index: "/index.html",
+            routes: {
+                "/home": "index.html"
+            },
+            middleware: [ historyApiFallback() ]
         },
-        startPath: "/views/index.html"
+        startPath: "/"
     });
 });
 
@@ -66,7 +72,7 @@ gulp.task('less-task', function () {
 
 // Concat and injecting dev-css-files in build dir
 gulp.task('css-inject', ['less-task'], function () {
-    var target = gulp.src('./dev_root/views/*.html');
+    var target = gulp.src('./dev_root/*.html');
     var customCssStream = gulp.src([
         './dev_root/css/lib-styles.min.css',
         './dev_root/css/main.min.css'
@@ -76,15 +82,15 @@ gulp.task('css-inject', ['less-task'], function () {
         .pipe(inject(
             customCssStream.pipe(print())
                 .pipe(concat('common.min.css'))
-                .pipe(gulp.dest('dev_root/css')), { read: false, addRootSlash: false, relative: true })
+                .pipe(gulp.dest('dev_root/css')), { read: false, addRootSlash: true, relative: true })
         )
-        .pipe(gulp.dest('./dev_root/views/'))
+        .pipe(gulp.dest('./dev_root/'))
         .pipe(reload({stream:true}));
 });
 
 gulp.task('clean:app_compiled', function () {
     return del([
-        './build/js/app.min.js'
+        './dev_root/js/app.min.js'
         // here we use a globbing pattern to match everything inside the `mobile` folder
         //'./build/js/*.js'
         // we don't want to clean this file though so we negate the pattern
@@ -93,35 +99,41 @@ gulp.task('clean:app_compiled', function () {
 });
 
 // Compiling js-dev js and injecting in build dir
-//gulp.task('js-dev-inject', ['clean:app_compiled'], function () {
-gulp.task('js-dev-inject', function () {
-    var target = gulp.src('./dev_root/views/index.html');
+gulp.task('js-dev-inject', ['clean:app_compiled'], function () {
+    var target = gulp.src('./dev_root/*.html');
 
+    var urlConfigStream = gulp.src([
+        './dev_root/js/api-url-config.js'])
+        .pipe(gulp.dest('dev_root/js/'));
+    
     var devJsStream = gulp.src([
-            './dev_root/js/api-url-config.js',
             './dev_root/js/app.js',
             './dev_root/js/*.js',
             './dev_root/js/**/*.js',
             '!./dev_root/js/libs/*.js'])
-        //.pipe(print())
-        //.pipe(sourcemaps.init())
-        //.pipe(concat('app.min.js'))
-        .pipe(ngAnnotate());
-        //.pipe(uglify())
-        //.pipe(sourcemaps.write('./maps'))
-        //.pipe(gulp.dest('dev_root/js/'));
+        .pipe(print())
+        .pipe(sourcemaps.init())
+        .pipe(concat('app.min.js'))
+        .pipe(ngAnnotate())
+        .pipe(uglify())
+        .pipe(sourcemaps.write('./maps'))
+        .pipe(gulp.dest('dev_root/js/'));
 
     return target
         .pipe(
             inject(
+                urlConfigStream,
+                {name: 'urlconfig', read: false, addRootSlash: true, relative: true}))
+        .pipe(
+            inject(
                 devJsStream,
-                {name: 'dev', read: false, addRootSlash: false, relative: true}))
-        .pipe(gulp.dest('./dev_root/views/'));
+                {name: 'dev', read: false, addRootSlash: true, relative: true}))
+        .pipe(gulp.dest('./dev_root/'));
 });
 
 // Injecting js-vendor-libs in build dir
 gulp.task('js-vendor-inject', function () {
-    var target = gulp.src('./dev_root/views/index.html');
+    var target = gulp.src('./dev_root/*.html');
     var vendorJsStream = gulp.src([
             './bower_components/jquery/dist/jquery.min.js',
             './bower_components/bootstrap/dist/js/bootstrap.min.js',
@@ -139,8 +151,8 @@ gulp.task('js-vendor-inject', function () {
         .pipe(
             inject(
                 vendorJsStream,
-                {name: 'vendor', read: false, addRootSlash: false, relative: true}))
-        .pipe(gulp.dest('./dev_root/views/'));
+                {name: 'vendor', read: false, addRootSlash: true, relative: true}))
+        .pipe(gulp.dest('./dev_root/'));
 });
 
 // Default Gulp Task
