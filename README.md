@@ -1,4 +1,4 @@
-# Preapaid.Web.SEO
+# Prepaid.Web.SEO
 Starting pack for angularjs project with default nodejs/bower packages and gulp tasks.
 
 ### Version
