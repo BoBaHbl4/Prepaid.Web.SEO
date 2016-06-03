@@ -23,18 +23,18 @@ gulp.task('browser-sync', function() {
     browserSync({
         server: {
             baseDir: "./dev_root/",
-            index: "/index.html"
-            //routes: {
-            //    "/home": "index.html"
-            //},
-            //middleware: [ historyApiFallback() ]
+            index: "/index.html",
+            routes: {
+               "/home": "index.html"
+            },
+            middleware: [ historyApiFallback() ]
         },
         startPath: "/"
     });
 });
 
 gulp.task('updateView', function() {
-    gulp.src(['./dev_root/views/*.*', './build/css/*.css'])
+    gulp.src(['./dev_root/views/*.*', './dev_root/css/*.css'])
         .pipe(reload({stream:true}));
 });
 
