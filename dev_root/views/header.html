@@ -12,9 +12,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li ui-sref-active="active"><a href="#" ui-sref="root.home">Home</a></li>
-                <li ui-sref-active="active"><a href="#" ui-sref="root.about">About</a></li>
-                <li ui-sref-active="active"><a href="#" ui-sref="root.contacts">Contact</a></li>
+                <li ui-sref-active="active"><a ui-sref="root.home">Home</a></li>
+                <li ui-sref-active="active"><a ui-sref="root.about">About</a></li>
+                <li ui-sref-active="active"><a ui-sref="root.contacts">Contact</a></li>
 
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -23,9 +23,7 @@
                         {{ langNameCurrent }}
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li ng-repeat="lang in langArray"><a href ng-click="changeLanguage(lang.langId)">{{ lang.langName }}</a></li>
-                        <!--<li><a href ng-click="changeLanguage('de')">Deutsch</a></li>
-                        <li><a href ng-click="changeLanguage('ru')">Русский</a></li>-->
+                        <li ng-repeat="lang in langArray"><a ng-click="changeLanguage(lang.langId)" data-lang="{{ lang.langId }}">{{ lang.langName }}</a></li>
                     </ul>
                 </li>
             </ul>
