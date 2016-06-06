@@ -24,9 +24,9 @@ gulp.task('browser-sync', function() {
         server: {
             baseDir: "./dev_root/",
             index: "/index.html",
-            routes: {
-               "/home": "index.html"
-            },
+            // routes: {
+            //    "/home": "index.html"
+            // },
             middleware: [ historyApiFallback() ]
         },
         startPath: "/"
@@ -110,6 +110,7 @@ gulp.task('js-dev-inject', ['clean:app_compiled'], function () {
             './dev_root/js/app.js',
             './dev_root/js/*.js',
             './dev_root/js/**/*.js',
+            '!./dev_root/js/**/api-url-config.js',
             '!./dev_root/js/libs/*.js'])
         .pipe(print())
         .pipe(sourcemaps.init())

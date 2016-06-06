@@ -74,6 +74,7 @@
     <Content Include="dev_root\index.html" />
     <Content Include="dev_root\js\api-url-config.js" />
     <Content Include="dev_root\js\app.js" />
+    <Content Include="dev_root\js\app.min.js" />
     <Content Include="dev_root\js\config.js" />
     <Content Include="dev_root\js\constant.js" />
     <Content Include="dev_root\js\controllers\main.controller.js" />
@@ -88,13 +89,13 @@
     <Content Include="dev_root\js\libs\loading-bar.min.js" />
     <Content Include="dev_root\js\libs\ui-bootstrap-tpls.min.js" />
     <Content Include="dev_root\js\libs\ui-bootstrap.min.js" />
+    <Content Include="dev_root\js\run.js" />
     <Content Include="dev_root\js\services\customer.data.service.js" />
     <Content Include="dev_root\views\about.state.html" />
     <Content Include="dev_root\views\contacts.state.html" />
     <Content Include="dev_root\views\data-content.html" />
     <Content Include="dev_root\views\footer.html" />
     <Content Include="dev_root\views\header.html" />
-    <Content Include="dev_root\views\index.html" />
     <Content Include="dev_root\views\index.state.html" />
     <Content Include="dev_root\views\partials\somePartial.html" />
     <Content Include="gulpfile.js" />
@@ -196,7 +197,10 @@
     <Content Include="bower.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Content Include="dev_root\web.config" />
+    <Content Include="dev_root\web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="dev_root\js\maps\app.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -205,7 +209,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -213,7 +219,6 @@
   <ItemGroup>
     <Folder Include="build\js\" />
     <Folder Include="build\views\" />
-    <Folder Include="dev_root\js\maps\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
