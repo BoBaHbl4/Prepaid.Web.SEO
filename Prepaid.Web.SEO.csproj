@@ -71,6 +71,7 @@
     <Content Include="dev_root\css\less\loading-bar.css" />
     <Content Include="dev_root\css\lib-styles.min.css" />
     <Content Include="dev_root\css\main.min.css" />
+    <Content Include="dev_root\fonts\fontawesome-webfont.svg" />
     <Content Include="dev_root\index.html" />
     <Content Include="dev_root\js\api-url-config.js" />
     <Content Include="dev_root\js\app.js" />
@@ -201,6 +202,11 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="dev_root\js\maps\app.min.js.map" />
+    <Content Include="dev_root\fonts\fontawesome-webfont.eot" />
+    <Content Include="dev_root\fonts\fontawesome-webfont.ttf" />
+    <Content Include="dev_root\fonts\fontawesome-webfont.woff" />
+    <Content Include="dev_root\fonts\fontawesome-webfont.woff2" />
+    <Content Include="dev_root\fonts\FontAwesome.otf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

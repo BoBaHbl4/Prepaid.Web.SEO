@@ -112,12 +112,12 @@ gulp.task('js-dev-inject', ['clean:app_compiled'], function () {
             './dev_root/js/**/*.js',
             '!./dev_root/js/**/api-url-config.js',
             '!./dev_root/js/libs/*.js'])
-        .pipe(print())
-        .pipe(sourcemaps.init())
-        .pipe(concat('app.min.js'))
-        .pipe(ngAnnotate())
-        .pipe(uglify())
-        .pipe(sourcemaps.write('./maps'))
+        // .pipe(print())
+        // .pipe(sourcemaps.init())
+        // .pipe(concat('app.min.js'))
+        // .pipe(ngAnnotate())
+        // .pipe(uglify())
+        // .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest('dev_root/js/'));
 
     return target
@@ -139,6 +139,7 @@ gulp.task('js-vendor-inject', function () {
             './bower_components/jquery/dist/jquery.min.js',
             './bower_components/bootstrap/dist/js/bootstrap.min.js',
             './bower_components/angular/angular.min.js',
+            './bower_components/angular-translate/angular-translate.min.js',
             './bower_components/angular-animate/angular-animate.min.js',
             './bower_components/angular-touch/angular-touch.min.js',
             './bower_components/angular-loading-bar/build/loading-bar.min.js',
