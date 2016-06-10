@@ -115,7 +115,7 @@ gulp.task('js-dev-inject', ['clean:app_compiled'], function () {
         // .pipe(print())
         // .pipe(sourcemaps.init())
         // .pipe(concat('app.min.js'))
-        // .pipe(ngAnnotate())
+        //.pipe(ngAnnotate())
         // .pipe(uglify())
         // .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest('dev_root/js/'));

@@ -9,6 +9,7 @@
         .module('PrepaidSEO', [
             'angular-loading-bar',
             'ui.router',
+            'pascalprecht.translate',
             'ui.bootstrap',
             'ngAnimate',
             'ngTouch'

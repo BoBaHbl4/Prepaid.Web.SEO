@@ -4,14 +4,22 @@
         .module('PrepaidSEO')
         .config(config);
 
-    function config($stateProvider, $urlRouterProvider, cfpLoadingBarProvider, $locationProvider) {
+    function config($stateProvider, $urlRouterProvider, cfpLoadingBarProvider, $locationProvider, $translateProvider) {
 
         console.log('Config');
+
+        // The definition of translation tables
+        $translateProvider.translations('eng', translationsENG);
+        $translateProvider.translations('de', translationsDE);
+        $translateProvider.translations('ru', translationsRU);
+        $translateProvider.preferredLanguage('eng');
+        $translateProvider.fallbackLanguage('eng');
 
         // Loading Bar
         cfpLoadingBarProvider.spinnerTemplate = '' +
             '<div class="page-spinner"><i class="fa fa-spinner fa-pulse page-spinner-icon text-primary"></i></div>';
-
+        
+        // Routing rules
         $urlRouterProvider.otherwise('/eng/app-home/');
 
         $stateProvider

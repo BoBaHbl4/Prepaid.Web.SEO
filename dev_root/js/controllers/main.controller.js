@@ -1,6 +1,7 @@
 (function() {
     'use strict';
 
+    MainCtrl.$inject = ["$scope", "$state", "$location", "$rootScope", "appConstant", "$translate", "cfpLoadingBar", "getService"];
     angular
         .module('PrepaidSEO')
         .controller('MainCtrl', MainCtrl);
@@ -10,8 +11,9 @@
         $state,
         $location,
         $rootScope,
-        cfpLoadingBar,
         appConstant,
+        $translate,
+        cfpLoadingBar,
         getService) {
 
         console.log('Main controller');
@@ -29,6 +31,7 @@
             if ($scope.langIdCurrent == value.langId) {
                 console.log('loaded "' + value.langId + '"');
                 $scope.langNameCurrent = value.langName;
+                $translate.use(value.langId);
                 return $scope.langNameCurrent;
             }
         });
@@ -43,6 +46,7 @@
                 if (language == value.langId) {
                     console.log('switched to "' + value.langId +'"');
                     $scope.langNameCurrent = value.langName;
+                    $translate.use(value.langName);
                     return $scope.langNameCurrent;
                 }
             });
