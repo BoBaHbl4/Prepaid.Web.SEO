@@ -7,6 +7,9 @@
     function config($stateProvider, $urlRouterProvider, cfpLoadingBarProvider, $locationProvider, $translateProvider) {
 
         console.log('Config');
+        
+        // TODO add meta tags
+        // https://github.com/AvraamMavridis/angular-metatags
 
         // The definition of translation tables
         $translateProvider.translations('eng', translationsENG);
