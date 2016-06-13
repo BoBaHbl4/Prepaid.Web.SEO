@@ -1,11 +1,13 @@
-<h1>Aniplissoran contacts</h1>
+<h1>{{ 'HEAD1_CONTACT_ST' | translate }}</h1>
 <address class="vcard">
-    <a class="url fn org" href="http://angular.srvrco.com/">Aniplissoran</a>
- <div class="adr" style="display:block">
-  <span class="street-address">1665 3rd St.</span> <span class="extended-address">Suite 207</span>
-  <div>
-   <span class="locality">San Francisco</span>, <span class="region">CA</span> <span class="postal-code">04107</span>
-  </div>
-  <span class="country-name">United States</span>
- </div>
+    <a class="url fn org" href="http://angular.srvrco.com/">{{ 'VCARD_URL_NAME' | translate }}</a>
+    <div class="adr" style="display:block">
+        <span class="street-address">{{ 'VCARD_ADR_STREET_ADDRESS' | translate }}</span>,
+        <span class="extended-address">{{ 'VCARD_ADR_EXTENDED_ADDRESS' | translate }}</span>
+        <div>
+            <span class="locality">{{ 'VCARD_ADR_LOCALITY' | translate }}</span>, <span class="region">{{ 'VCARD_ADR_REGION' | translate }}</span>
+            <span class="postal-code">{{ 'VCARD_ADR_POSTAL_CODE' | translate }}</span>
+        </div>
+        <span class="country-name">{{ 'VCARD_ADR_COUNTRY_NAME' | translate }}</span>
+    </div>
 </address>

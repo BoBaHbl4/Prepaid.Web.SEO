@@ -15,6 +15,9 @@
         $translateProvider.preferredLanguage('eng');
         $translateProvider.fallbackLanguage('eng');
 
+        // Enable escaping of HTML
+        $translateProvider.useSanitizeValueStrategy('escape');
+
         // Loading Bar
         cfpLoadingBarProvider.spinnerTemplate = '' +
             '<div class="page-spinner"><i class="fa fa-spinner fa-pulse page-spinner-icon text-primary"></i></div>';

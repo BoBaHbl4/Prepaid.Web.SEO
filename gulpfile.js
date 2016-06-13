@@ -14,6 +14,7 @@ var uglify = require('gulp-uglify');
 var ngAnnotate = require('gulp-ng-annotate');
 var sourcemaps = require('gulp-sourcemaps');
 var path = require('path');
+var sitemap = require('gulp-sitemap');
 var util = require('gulp-util');
 var merge = require('merge-stream');
 var del = require('del');
@@ -33,11 +34,25 @@ gulp.task('browser-sync', function() {
     });
 });
 
+// Generates site map for search engines
+
+gulp.task('sitemap', function () {
+    gulp.src(['./dev_root/views/*.*', './dev_root/*.html'], {
+        read: false
+    })
+        .pipe(sitemap({
+            siteUrl: 'http://angular.srvrco.com/'
+        }))
+        .pipe(gulp.dest('./dev_root'));
+});
+
+// Updates views if css or html is changed
 gulp.task('updateView', function() {
     gulp.src(['./dev_root/views/*.*', './dev_root/css/*.css'])
         .pipe(reload({stream:true}));
 });
 
+// Updates app if js is changed
 gulp.task('updateScript', ['updateView', 'js-dev-inject'], function() {
     gulp.src('./dev_root/js/**/*.*')
         .pipe(reload({stream:true}));
