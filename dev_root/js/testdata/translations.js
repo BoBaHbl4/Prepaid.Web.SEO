@@ -1,4 +1,10 @@
 var translationsENG = {
+    // Common Content
+    PROJECT_NAME: 'Aniplissoran',
+    LINK_HOME: 'Home',
+    LINK_ABOUT: 'About',
+    LINK_CONTACTS: 'Contacts',
+    FOOTER_INFO: '2016 Aniplissoranian.',
     // Index State Content
     HEAD1_INDEX_ST: 'Aniplissoran the main objective',
     PARAGRAPH1_INDEX_ST: 'Aniplissoran — we are here to help your to understand the best approach of best practices of aniplissoranian customization. Next one will be about something different. Cause it\'s imaginary words in imaginary world of Aniplissoran.',
@@ -23,6 +29,12 @@ var translationsENG = {
 };
 
 var translationsDE= {
+    // Common Content
+    PROJECT_NAME: 'Aniplissorande',
+    LINK_HOME: 'Zuhause',
+    LINK_ABOUT: 'Etwa',
+    LINK_CONTACTS: 'Impressum',
+    FOOTER_INFO: '2016 Aniplissoraniande',
     // Index State Content
     HEAD1_INDEX_ST: 'Aniplissorande das Hauptziel',
     PARAGRAPH1_INDEX_ST: 'Aniplissorande - wir sind Ihr zu helfen, den besten Ansatz von Best Practices von aniplissoraniande Anpassung zu verstehen. Als nächstes wird man sein, über etwas anderes. Weil es imaginären Worte in imaginäre Welt von Aniplissorande.',
@@ -47,6 +59,12 @@ var translationsDE= {
 };
 
 var translationsRU= {
+    // Common Content
+    PROJECT_NAME: 'Аниплиссоран',
+    LINK_HOME: 'Главная',
+    LINK_ABOUT: 'О нас',
+    LINK_CONTACTS: 'Контакты',
+    FOOTER_INFO: '2016 Аниплиссоран',
     // Index State Content
     HEAD1_INDEX_ST: 'Основная цель Аниплиссорана',
     PARAGRAPH1_INDEX_ST: 'Аниплиссоран — мы работаем для того, чтобы помочь вам воспользоваться передовым подходом aниплиссоранcкой разработки. Далее мы будет рассуждать о чём-нибудь другом. Потому что всё это выдуманные термины в воображаемом мире Аниплиссорана.',
