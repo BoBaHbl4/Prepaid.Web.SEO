@@ -29,11 +29,9 @@
         $scope.langIdCurrent = $scope.locationPath[1];
         angular.forEach($rootScope.langArray, function(value){
             if ($scope.langIdCurrent == value.langId) {
-                console.log('Current language ' + $scope.langIdCurrent);
-                console.log('loaded "' + value.langId + '"');
+                console.log('Current language ' + '"' + $scope.langIdCurrent + '"');
                 $scope.langNameCurrent = value.langName;
                 $translate.use(value.langId);
-                console.log($scope.langNameCurrent);
                 return $scope.langNameCurrent;
             }
         });
@@ -46,7 +44,7 @@
             $state.go($state.current.name, {language: language});
             angular.forEach($rootScope.langArray, function(value){
                 if (language == value.langId) {
-                    console.log(value.langId);
+                    console.log('Switched to "' + value.langId + '"');
                     $scope.langNameCurrent = value.langName;
                     $translate.use(value.langId);
                     return $scope.langNameCurrent;

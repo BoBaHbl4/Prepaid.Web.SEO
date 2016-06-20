@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html ng-app="PrepaidSEO">
-<head lang="eng">
+<html ng-app="PrepaidSEO"
+      ng-controller="MainCtrl"
+      lang="eng">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="/">
-    <title>Aniplissoran project</title>
+    <meta name="msvalidate.01" content="54448E6FC9B3329782AA20AFCB4076CA">
+    <title>{{ 'TITLE_INDEX_ST' | translate }}</title>
+    <meta name="description" content="{{ 'META_NAME_DESCRIPTION_INDEX_ST' | translate }}">
+    <meta property="og:title" content="{{ 'OG_TITLE_INDEX_ST' | translate }}">
+    <meta itemprop="description" content="{{ 'META_ITEMPROP_DESCRIPTION_INDEX_ST' | translate }}">
     <!-- inject:css -->
     <link rel="stylesheet" href="/css/common.min.css">
     <!-- endinject -->
@@ -16,7 +22,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body ng-controller="MainCtrl">
+<body>
 
     <!-- Header -->
     <header ui-view="header" id="header"></header>
@@ -38,6 +44,7 @@
     <script src="/js/libs/bootstrap.min.js"></script>
     <script src="/js/libs/angular.min.js"></script>
     <script src="/js/libs/angular-translate.min.js"></script>
+    <script src="/js/libs/update-meta.min.js"></script>
     <script src="/js/libs/angular-animate.min.js"></script>
     <script src="/js/libs/angular-touch.min.js"></script>
     <script src="/js/libs/loading-bar.min.js"></script>

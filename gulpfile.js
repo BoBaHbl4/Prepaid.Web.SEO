@@ -155,6 +155,7 @@ gulp.task('js-vendor-inject', function () {
             './bower_components/bootstrap/dist/js/bootstrap.min.js',
             './bower_components/angular/angular.min.js',
             './bower_components/angular-translate/angular-translate.min.js',
+            './bower_components/angular-update-meta/dist/update-meta.min.js',
             './bower_components/angular-animate/angular-animate.min.js',
             './bower_components/angular-touch/angular-touch.min.js',
             './bower_components/angular-loading-bar/build/loading-bar.min.js',

@@ -12,6 +12,7 @@
             'pascalprecht.translate',
             'ui.bootstrap',
             'ngAnimate',
+            'updateMeta',
             'ngTouch'
         ]);
 

@@ -24,6 +24,10 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -67,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="dev_root\.htaccess" />
     <Content Include="dev_root\css\common.min.css" />
     <Content Include="dev_root\css\less\loading-bar.css" />
     <Content Include="dev_root\css\lib-styles.min.css" />
@@ -92,6 +97,8 @@
     <Content Include="dev_root\js\libs\ui-bootstrap.min.js" />
     <Content Include="dev_root\js\run.js" />
     <Content Include="dev_root\js\services\customer.data.service.js" />
+    <Content Include="dev_root\robot.txt" />
+    <Content Include="dev_root\sitemap.xml" />
     <Content Include="dev_root\views\about.state.html" />
     <Content Include="dev_root\views\contacts.state.html" />
     <Content Include="dev_root\views\data-content.html" />
@@ -99,6 +106,9 @@
     <Content Include="dev_root\views\header.html" />
     <Content Include="dev_root\views\index.state.html" />
     <Content Include="dev_root\views\partials\somePartial.html" />
+    <Content Include="dev_root\web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="gulpfile.js" />
     <Content Include="packages.config" />
     <Content Include="dev_root\css\common.less" />
@@ -198,9 +208,6 @@
     <Content Include="bower.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Content Include="dev_root\web.config">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="dev_root\js\maps\app.min.js.map" />
     <Content Include="dev_root\fonts\fontawesome-webfont.eot" />
     <Content Include="dev_root\fonts\fontawesome-webfont.ttf" />
