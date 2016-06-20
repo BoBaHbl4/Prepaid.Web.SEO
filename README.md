@@ -16,11 +16,6 @@ npm install
 bower install
 ```
 
-Run gulp starting task (to move less libs in dev folder):
-```
-gulp start-project
-```
-
 Run local server
 ```
 gulp
