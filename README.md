@@ -1,5 +1,5 @@
 # Prepaid.Web.SEO
-Starting pack for angularjs project with default nodejs/bower packages and gulp tasks.
+Project for testing SEO-sensitive parts of front-end on angularjs projects. Links (routing), dynamic meta-tags for different states, multi-language support, etc.
 
 ### Version
 1.0.0
